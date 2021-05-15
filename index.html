@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <title>Nostra Cuccina - Menu</title>
+    <meta name="description" content="Nostra Cuccina">
+    <meta name="author" content="Richard Santiago">
+    <meta name="copyright" content="Richard Santiago"/>
+    <meta property="og:title" content="Nostra Cuccina">
+    <meta property="og:description" content="Menu Cart">
+    <meta property="og:image" content="dist/img/preview.png"/>
+    <meta property="twitter:title" content="Nostra Cuccina">
+    <meta property="twitter:description" content="Menu Cart">
+
+    <link rel="icon" href="/dist/img/icon.png">
+
+    <link rel="stylesheet" href="dist/css/main.css">
+    <link rel="stylesheet" href="dist/css/frame.css">
+
+    <!-- Box Icons -->
+    <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- ===== Animate CSS ===== -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+</head>
+<body class="body">
+    <nav>
+        <div class="container">
+
+            <div class="wrapper">
+                <div class="logo-container text-center">
+                    <img class="logo" src="dist/img/logo.svg" alt="logo">
+                </div>
+
+                <div class="hide nav-menu">
+
+                    <div class="close-icon wrapper">
+                        <i onclick="showNav()" class='bx bx-arrow-back icon'></i>
+                        <p class="display-3 cart-title">My Cart</p>
+                        <p onclick="storage.clearCart()"><i class='bx bx-trash icon'></i></p>
+                    </div>
+
+                    <div class="cart mt-3">
+
+                    </div>
+
+                    <div class="cart-total wrapper">
+                        <p>
+                            Total:
+                        </p>
+                        <p class="cart-subtotal">
+
+                        </p>
+                    </div>
+                </div>
+
+                <div class="menu-icon wrapper">
+                    <p class="pr-0 total-price"></p>
+                    <i onclick="showNav()" class='bx bx-cart-alt icon' id="hamburger"></i>
+                </div>
+
+            </div>
+
+        </div>
+    </nav>
+
+    <section class="mt-5">
+        <div class="container">
+            <img src="dist/img/banner.svg" alt="banner">
+        </div>
+    </section>
+
+    <section class="mt-1 mb-4">
+        <div class="container">
+            <div data-lists class="menu row-4 center">
+                
+            </div>
+        </div>
+    </section>
+
+    <template class="menu-template">
+        <div class="card column mt-2 ">
+            <div class="">
+                <div class="center-center menu-image-container">
+                    <img class="menu-image" src="dist/img/plate.png" alt="coffee">
+                </div>
+                <p class="item-name text-left"></p>
+            </div>
+            
+            <div class="wrapper price-group">
+                <p class="item-price"></p>
+                <i type="button" class='bx bx bxs-plus-circle cart-button'></i>
+            </div>
+        </div>
+    </template>
+
+    <template class="cart-template">
+        <div class="row mb-2">
+            <div class="center-center pr-0">
+                <img class="coffee-cart" src="dist/img/plate.png" alt="coffee">
+            </div>
+            <div class="column info">
+                <div class="group mb-0">
+                    <p class="cart-name"></p>
+                    <p class="cart-price"></p>
+                </div>
+                <div class="wrapper">
+                    <p class="cart-item-total"></p>
+                    <div class="wrapper pcs">
+                        <i id="add" class='bx bx-plus add'></i>
+                        <p class="quantity"></p>
+                        <i id="less" class='bx bx-minus less'></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+
+
+    <script src="dist/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+[
+    {
+        "item": "Fresh and Healthy Salad",
+        "price": "320",
+        "public_id": "fd001"
+    },
+    {
+        "item": "Cashewnut Chicken Salad",
+        "price": "320",
+        "public_id": "fd002"
+    },
+    {
+        "item": "Caprese Salad",
+        "price": "320",
+        "public_id": "fd003"
+    },
+    {
+        "item": "Panzanella",
+        "price": "320",
+        "public_id": "fd004"
+    },
+    {
+        "item": "Insalata Russa",
+        "price": "320",
+        "public_id": "fd005"
+    },
+    {
+        "item": "Insalata di Riso",
+        "price": "320",
+        "public_id": "fd006"
+    },
+    {
+        "item": "Giardiniera",
+        "price": "320",
+        "public_id": "fd007"
+    },
+    {
+        "item": "Cappon magro",
+        "price": "320",
+        "public_id": "fd008"
+    }
+]

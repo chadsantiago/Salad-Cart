@@ -1,0 +1,30 @@
+@media only screen and (-webkit-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min--moz-device-pixel-ratio: 1.5),
+only screen and (min-device-pixel-ratio: 1.5) {
+
+    html {
+        overflow-x: hidden;
+    }
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-overflow-scrolling: touch;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    font-size: 100%;
+    scroll-behavior: smooth;
+}
+
+@import './variables';
+
+body {
+    background-color: $background;
+}
+@import './header', './kits', './base', './frames';

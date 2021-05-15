@@ -1,0 +1,20 @@
+// Color
+$primary-color: #aeafaf;
+$secondary-color: #242424;
+$background: #f4f4f2;
+$white: #f7f7f7;
+$gray: #f2f1f2;
+
+// Font
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+$primary-font: 'Poppins', sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap');
+$secondary-font: 'Space Mono', monospace;
+
+@mixin flex($direction, $justify, $align) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
