@@ -589,7 +589,7 @@ input:active {
   display: -ms-flexbox;
   display: flex;
   position: fixed;
-  bottom: 50px;
+  bottom: 200px;
   left: 50%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);

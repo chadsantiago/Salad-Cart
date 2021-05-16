@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             Ui.displayProducts(menuitems)
             console.log('Rendered menu from Local Storage...')
-        }, 3000)
+        }, 120000)
         Ui.displayCart(menuCart)
         storage.cartTotal()
     } else {
