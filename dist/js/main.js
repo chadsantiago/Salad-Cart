@@ -91,7 +91,7 @@ class storage {
     static cartTotal() {
         const subtotal = document.querySelector('.cart-subtotal')
         let totalprice = menuCart.reduce((total, cart) => total + parseInt(cart.total), 0)
-        subtotal.innerText = '₱' + totalprice
+        subtotal.innerText = 'My Cart - ₱' + totalprice
     }
 
     static updateCart() {
