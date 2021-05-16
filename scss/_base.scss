@@ -138,6 +138,8 @@ input:active {
 	opacity: 1;
 	display: flex;
 	position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 	transition: opacity .3s ease-in;
 }
 

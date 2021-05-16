@@ -589,6 +589,9 @@ input:active {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
   -webkit-transition: opacity .3s ease-in;
   transition: opacity .3s ease-in;
 }
