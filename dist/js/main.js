@@ -10,7 +10,7 @@ let menuCart = JSON.parse(localStorage.getItem(local_storage_key_cart)) || []
 
 class Products {
     async getProductsApi() {
-        const response = await fetch('items.json')
+        const response = await fetch('dist/data/salads.json')
         const menu = await response.json()
         return menu
     }
@@ -170,7 +170,7 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             Ui.displayProducts(menuitems)
             console.log('Rendered menu from Local Storage...')
-        }, 3000)
+        }, 120000)
         Ui.displayCart(menuCart)
         storage.cartTotal()
     } else {
