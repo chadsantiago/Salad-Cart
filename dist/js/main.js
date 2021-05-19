@@ -10,17 +10,27 @@ let menuCart = JSON.parse(localStorage.getItem(local_storage_key_cart)) || []
 
 class Products {
     async getProductsApi() {
-        const response = await fetch('dist/data/salads.json')
-        const menu = await response.json()
-        return menu
+        try {
+            const response = await fetch('dist/data/salads.json')
+            const menu = await response.json()
+            console.log('Success fetching from API')
+            return menu
+        } catch {
+            console.log('Error fetching from API')
+        }
     }
 
     async saveProductsStorage(products) {
-        products.forEach(menu => {
-            const newmenu = storage.createmenu(menu.item, menu.public_id, menu.price)
-            menuitems.push(newmenu)
-            storage.save()
-        });
+        try {
+            products.forEach(menu => {
+                const newmenu = storage.createmenu(menu.item, menu.public_id, menu.price)
+                menuitems.push(newmenu)
+                storage.save()
+                console.log('Success saving to local storage')
+            });
+        } catch {
+            console.log('Error saving to local storage')
+        }
     }
 }
 
@@ -174,16 +184,13 @@ document.addEventListener('DOMContentLoaded', () => {
         Ui.displayCart(menuCart)
         storage.cartTotal()
     } else {
+        console.log('Fetching from API...')
         product.getProductsApi()
             .then(response => {
                 product.saveProductsStorage(response)
                 setTimeout(() => {
                     Ui.displayProducts(menuitems)
-                    console.log('Rendered menu from API...')
                 }, 3000)
-            })
-            .catch(err => {
-                console.log('Error fetching API')
             })
     }
 })
